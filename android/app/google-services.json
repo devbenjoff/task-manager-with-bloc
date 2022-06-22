@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "846413837408",
+    "project_id": "task-manager-bloc",
+    "storage_bucket": "task-manager-bloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846413837408:android:9456b577f4245114997f05",
+        "android_client_info": {
+          "package_name": "com.example.task_manager_with_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846413837408-oc71nbfgsljugu61qicftmpuqcnoeneg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-6sXDEaqQE2FKNVE9KBqq1yHfbxaHzik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846413837408-oc71nbfgsljugu61qicftmpuqcnoeneg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
