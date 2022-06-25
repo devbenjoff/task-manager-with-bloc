@@ -15,6 +15,7 @@ class TasksBloc extends Bloc<TasksEvent, TasksState> {
 
   TasksBloc(this._taskRepo) : super(const TasksInitial()) {
     on<LoadTasksEvent>(_onTasksLoad);
+    on<AddTaskEvent>(_onAddTask);
   }
 
   Future<void> _onTasksLoad(LoadTasksEvent event, Emitter emit) async {
@@ -31,6 +32,20 @@ class TasksBloc extends Bloc<TasksEvent, TasksState> {
       emit(TasksLoaded(tasks));
     } catch (err) {
       emit(const TasksError());
+    }
+  }
+
+  Future<void> _onAddTask(AddTaskEvent event, Emitter emit) async {
+    try {
+      if (state is AddTaskLoading) {
+        return;
+      }
+
+      emit(const AddTaskLoading());
+      await _taskRepo.addTask(event.task);
+      emit(const AddTaskDone());
+    } catch (err) {
+      emit(const AddTaskError());
     }
   }
 

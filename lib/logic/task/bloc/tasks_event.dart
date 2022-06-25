@@ -8,3 +8,8 @@ abstract class TasksEvent {
 class LoadTasksEvent extends TasksEvent {
   const LoadTasksEvent();
 }
+
+class AddTaskEvent extends TasksEvent {
+  final Task task;
+  const AddTaskEvent({required this.task});
+}

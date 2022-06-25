@@ -19,4 +19,9 @@ class TasksFirebaseRepo implements TasksRepo {
     yield* snapshot
         .map((event) => event.docs.map((e) => Task.fromDoc(e)).toList());
   }
+
+  @override
+  Future<void> addTask(Task task) async {
+    await _collection.doc().set(task.toJson());
+  }
 }

@@ -22,3 +22,15 @@ class TasksLoaded extends TasksState {
 class TasksError extends TasksState {
   const TasksError();
 }
+
+class AddTaskLoading extends TasksState {
+  const AddTaskLoading();
+}
+
+class AddTaskDone extends TasksState {
+  const AddTaskDone();
+}
+
+class AddTaskError extends TasksState {
+  const AddTaskError();
+}
